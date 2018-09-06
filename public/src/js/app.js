@@ -39,12 +39,14 @@ function createTableWithData(data) {
   var tr = table.insertRow();
   tr.insertCell().appendChild(document.createTextNode("Id"));
   tr.insertCell().appendChild(document.createTextNode("Title"));
+  tr.insertCell().appendChild(document.createTextNode("Comments"));
   tr.insertCell().appendChild(document.createTextNode("Created at"));
   tr.insertCell().appendChild(document.createTextNode("Updated at"));
   data.forEach(function (entry) {
     var tr = table.insertRow();
     tr.insertCell().appendChild(document.createTextNode(entry.id));
     tr.insertCell().appendChild(document.createTextNode(entry.title));
+    tr.insertCell().appendChild(document.createTextNode(entry.comments));
     tr.insertCell().appendChild(document.createTextNode(entry.created_at));
     tr.insertCell().appendChild(document.createTextNode(entry.updated_at));
   });
