@@ -6,6 +6,7 @@ self.addEventListener('install', function (event) {
 
 self.addEventListener('activate', function (event) {
   console.log('[Service Worker] Activating Service Worker ' + serviceWorkerVersion, event);
+  // claim() sets this worker as the active worker
   return self.clients.claim();
 });
 
